@@ -120,7 +120,7 @@ body.dark-mode #navbar ul li a:hover {
 }
 
 .hero {
-    background: url('../img/css-hero.png') no-repeat center center/cover;
+    background: url('./img/css-hero.png') no-repeat center center/cover;
     color: white;
     padding: 100px 20px;
     text-align: center;
