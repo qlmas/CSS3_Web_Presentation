@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacije i Tranzicije</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ff325540d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <button id="menu-toggle" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="index.html" class="title-click"><h1><img src="/img/css3.svg" style=" height: 45px; vertical-align: middle;">CSS3 Web Prezentacija</h1></a>
+        <button id="mode-toggle" aria-label="Toggle dark/light mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="selectors.html">CSS Selektori</a></li>
+                <li><a href="layout.html">Layout Tehnike</a></li>
+                <li><a href="animations.html">Animacije i Tranzicije</a></li>
+                <li><a href="responsive.html">Responsive Design</a></li>
+                <li><a href="tools.html">CSS3 Alati</a></li>
+                <li><a href="references.html">Reference i Literatura</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <div class="info-card-selektori">
+            <h2>Animacije i Tranzicije</h2>
+            <p>CSS3 uvodi moćne alate za animacije i tranzicije koje omogućavaju stvaranje vizuelno atraktivnih efekata na web stranicama. Ove funkcije poboljšavaju korisničko iskustvo pružajući glatke i interaktivne animacije.</p>
+            
+            <h3>Tranzicije</h3>
+            <p>Tranzicije omogućavaju glatke promene stilova elemenata tokom određenog vremena. Koriste se za kreiranje jednostavnih animacija kada se svojstva CSS-a menjaju.</p>
+            <pre><code>
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: background-color 0.5s ease;
+}
+
+.box:hover {
+    background-color: red;
+}
+
+            </code></pre>
+            <div class="hover-example">
+                <h1>Primjer <i>:hover</i> efekta</h1>
+                <div class="box"></div>
+            </div>
+        </div>
+            
+<div class="info-card-selektori">
+            <h3>Animacije</h3>
+            <p>CSS animacije omogućavaju definiranje kompleksnih sekvenci ključnih frejmova koje menjaju stilove elemenata tokom vremena.</p>
+            <pre><code>
+@keyframes example {
+    0% { background-color: blue; left: 0px; top: 0px; }
+    25% { background-color: green; left: 200px; top: 0px; }
+    50% { background-color: yellow; left: 200px; top: 200px; }
+    75% { background-color: red; left: 0px; top: 200px; }
+    100% { background-color: blue; left: 0px; top: 0px; }
+}
+
+.animated-box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation: example 4s infinite;
+}
+            </code></pre>
+            <div class="animation-example">
+                <h1>Primjer animacije</h1>
+                <div class="animated-box"></div>
+            </div>            
+        </div>
+        <div class="info-card-selektori">
+            <h3>Transformacije</h3>
+            <p>Transformacije omogućavaju translaciju, skaliranje, rotaciju i kose elemente. One su često korišćene zajedno sa tranzicijama i animacijama za stvaranje kompleksnih efekata.</p>
+            <pre><code>
+.transform-box {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+}
+
+.transform-box:hover {
+    transform: rotate(0deg);
+}
+            </code></pre>
+            <div class="transform-example">
+                <h1>Primjer transformacije</h1>
+                <div class="transform-box"></div>
+            </div>            
+        </div>        
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Almas Muratović & Edina Zubčević</p>
+            <ul class="social-links">
+                <li><a href="https://css3.com/"><i class="fa-brands fa-css3-alt"></i></i></a></li>
+                <li><a href="https://www.facebook.com/css3com"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://x.com/xcss3x"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Tehnike</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ff325540d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <button id="menu-toggle" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="index.html" class="title-click"><h1><img src="/img/css3.svg" style=" height: 45px; vertical-align: middle;">CSS3 Web Prezentacija</h1></a>
+        <button id="mode-toggle" aria-label="Toggle dark/light mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="selectors.html">CSS Selektori</a></li>
+                <li><a href="layout.html">Layout Tehnike</a></li>
+                <li><a href="animations.html">Animacije i Tranzicije</a></li>
+                <li><a href="responsive.html">Responsive Design</a></li>
+                <li><a href="tools.html">CSS3 Alati</a></li>
+                <li><a href="references.html">Reference i Literatura</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <div class="info-card-selektori">
+            <h2>Layout Tehnike</h2>
+            <p>CSS3 donosi mnoge nove tehnike za layout koje omogućavaju kreiranje kompleksnih i responzivnih web dizajna. Ove tehnike uključuju Flexbox, Grid, i druge metode za kontrolu rasporeda elemenata na stranici.</p>
+        </div>
+        <div class="info-card-selektori">
+            <h3>Flexbox</h3>
+            <p>Flexbox (Flexible Box) je layout model koji omogućava efikasno raspoređivanje prostora među stavkama unutar kontejnera, čak i kada su njihova veličina nepoznata i/ili dinamična.</p>
+            <pre><code> 
+.container {
+    display: flex;
+    flex-direction: row; /* ili column */
+    justify-content: center; /* Poravnanje po glavnoj osi */
+    align-items: center; /* Poravnanje po poprečnoj osi */
+}
+            </code></pre>
+            <div class="container example-flex">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+            </div>
+        </div>
+        <div class="info-card-selektori">
+            <h3>Grid Layout</h3>
+            <p>CSS Grid Layout je dvodimenzionalni layout sistem koji omogućava kreiranje kompleksnih layouta sa redovima i kolonama.</p>
+            <pre><code> 
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tri kolone jednake širine */
+    grid-template-rows: auto;
+    gap: 10px; /* Razmak između grid stavki */
+}
+.item {
+    grid-column: span 2; /* Stavka koja se prostire preko dve kolone */
+}
+            </code></pre>
+            <div class="container example-grid">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+            </div>
+        </div>
+        <div class="info-card-selektori">
+            <h3>Float i Clear</h3>
+            <p>Float svojstvo se koristi za raspoređivanje elemenata levo ili desno unutar kontejnera, dok clear svojstvo sprečava elemente da se pojave pored floated elemenata.</p>
+            <pre><code> 
+img {
+    float: left;
+    margin: 10px;
+}
+p.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+            </code></pre>
+            <div class="float-container">
+                <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+                <p>Ovo je primer teksta pored slike koja koristi float.</p>
+                <p class="clearfix">Naredni element sa clearfix.</p>
+            </div>
+        
+            <h3>Positioning</h3>
+            <p>CSS positioning omogućava precizno pozicioniranje elemenata na web stranici.</p>
+            <ul>
+                <li><strong>Static:</strong> Default pozicioniranje.</li>
+                <li><strong>Relative:</strong> Pozicioniranje relativno prema normalnoj poziciji.</li>
+                <li><strong>Absolute:</strong> Pozicioniranje relativno prema najbližem pozicioniranom pretku.</li>
+                <li><strong>Fixed:</strong> Pozicioniranje relativno prema prozoru preglednika. <span id="show-fixed" style="text-decoration: underline; cursor: pointer;">Klikom ovdje aktivirate fixed element.</span></li> 
+                <li><strong>Sticky:</strong> Pozicioniranje bazirano na scroll poziciji.</li>
+            </ul>
+        </div>
+            <div class="position-container">
+                <div class="position-item static">Static</div>
+                <div class="position-item relative">Relative</div>
+                <div class="position-item absolute">Absolute</div>
+                <div class="position-item sticky">Sticky</div>
+                <div class="position-item fixed" id="fixed-item">Fixed</div>
+            </div>
+        </section>
+    
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Almas Muratović & Edina Zubčević</p>
+            <ul class="social-links">
+                <li><a href="https://css3.com/"><i class="fa-brands fa-css3-alt"></i></i></a></li>
+                <li><a href="https://www.facebook.com/css3com"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://x.com/xcss3x"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

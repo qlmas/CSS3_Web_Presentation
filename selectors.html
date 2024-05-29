@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selektori</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ff325540d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <button id="menu-toggle" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="index.html" class="title-click"><h1><img src="/img/css3.svg" style=" height: 45px; vertical-align: middle;">CSS3 Web Prezentacija</h1></a>
+        <button id="mode-toggle" aria-label="Toggle dark/light mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="selectors.html">CSS Selektori</a></li>
+                <li><a href="layout.html">Layout Tehnike</a></li>
+                <li><a href="animations.html">Animacije i Tranzicije</a></li>
+                <li><a href="responsive.html">Responsive Design</a></li>
+                <li><a href="tools.html">CSS3 Alati</a></li>
+                <li><a href="references.html">Reference i Literatura</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <div class="info-card-selektori">
+                <i class="fa-solid fa-info-circle fa-2x"></i>
+                <h2>Osnovni Selektori</h2>
+                <p>CSS selektori omogućavaju stilizovanje određenih elemenata na web stranici. Postoji mnogo vrsta selektora koji omogućavaju precizno ciljanje HTML elemenata. Evo nekih od najvažnijih:</p>
+                <details>
+                    <summary>Element selektori</summary>
+                    <p>Odabir elemenata po imenu taga (npr. <code>p</code> odabira sve paragrafe).</p>
+                    <pre><code class="language-css">p { color: blue; }</code></pre>
+                    <p class="info-card-selektori-primjer" style="color: blue;">To bi izgledalo ovako!</p>
+                </details>
+                <details>
+                    <summary>Class selektori</summary>
+                    <p>Odabir elemenata sa određenom klasom (npr. <code>.classname</code>).</p>
+                    <pre><code class="language-css">.classname { font-size: 20px; }</code></pre>
+                    <p class="info-card-selektori-primjer" style="font-size: 20px;">Ovaj tekst je veličine dvadeset piksela.</p>
+                </details>
+                <details>
+                    <summary>ID selektori</summary>
+                    <p>Odabir elemenata sa određenim ID-om (npr. <code>#idname</code>).</p>
+                    <pre><code class="language-css">#idname { background-color: yellow; }</code></pre>
+                    <p class="info-card-selektori-primjer-zuta">Ovaj tekst ima žutu boju pozadine.</p>
+                </details>
+            </div>
+
+            <div class="info-card-selektori">
+                <i class="fa-solid fa-puzzle-piece fa-2x"></i>
+                <h2>Kompleksni Selektori</h2>
+                <details>
+                    <summary>Descendant selektori</summary>
+                    <p>Odabir elemenata koji su potomci određenog elementa (npr. <code>div p</code> odabira sve paragrafe unutar divova).</p>
+                    <pre><code class="language-css">div p { margin: 10px; }</code></pre>
+                </details>
+                <details>
+                    <summary>Child selektori</summary>
+                    <p>Odabir direktnih potomaka određenog elementa (npr. <code>div > p</code> odabira sve paragrafe koji su direktna deca divova).</p>
+                    <pre><code class="language-css">div > p { padding: 5px; }</code></pre>
+                </details>
+                <details>
+                    <summary>Attribute selektori</summary>
+                    <p>Odabir elemenata sa određenim atributima (npr. <code>input[type="text"]</code> odabira sve inpute tipa tekst).</p>
+                    <pre><code class="language-css">input[type="text"] { border: 1px solid #000; }</code></pre>
+                </details>
+            </div>
+
+            <div class="info-card-selektori">
+                <i class="fa-solid fa-magic fa-2x"></i>
+                <h2>Pseudo-klase i Pseudo-elementi</h2>
+                <details>
+                    <summary>Pseudo-klase</summary>
+                    <p>Odabir elemenata u određenom stanju (npr. <code>a:hover</code> odabira linkove kada se prelazi mišem preko njih).</p>
+                    <pre><code class="language-css">a:hover { color: red; }</code></pre>
+                    <p class="info-card-selektori-primjer-pseudo">Kada preko ovog pređete postat će crveno!</p>
+                </details>
+                <details>
+                    <summary>Pseudo-elementi</summary>
+                    <p>Odabir i stilizovanje delova elemenata (npr. <code>p::first-line</code> odabira prvu liniju paragrafa).</p>
+                    <pre><code class="language-css">p::first-line { font-weight: bold; }</code></pre>
+                    <p class="info-card-selektori-primjer-pseudo-dva">Ovo je prva linija <br> ovog paragrafa <br> i samo će ona biti boldirana.</p>
+                </details>
+            </div>
+
+            <div class="info-card-selektori">
+                <i class="fa-solid fa-cogs fa-2x"></i>
+                <h2>Napredni Selektori u CSS3</h2>
+                <details>
+                    <summary>Attribute selektori</summary>
+                    <p>Prošireni su u CSS3 da uključuju više mogućnosti kao što su <code>[attribute^="value"]</code>, <code>[attribute$="value"]</code>, i <code>[attribute*="value"]</code>.</p>
+                    <pre><code class="language-css">a[href^="https"] { color: green; }</code></pre>
+                </details>
+                <details>
+                    <summary>:nth-child() i :nth-of-type()</summary>
+                    <p>Selektovanje elemenata na osnovu njihovog položaja u grupi.</p>
+                    <pre><code class="language-css">li:nth-child(odd) { background: #eee; }</code></pre>
+                </details>
+                <details>
+                    <summary>:not()</summary>
+                    <p>Selektovanje elemenata koji ne odgovaraju određenom selektoru.</p>
+                    <pre><code class="language-css">:not(p) { color: grey; }</code></pre>
+                </details>
+            </div>
+        </section>
+    </main> 
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Almas Muratović & Edina Zubčević</p>
+            <ul class="social-links">
+                <li><a href="https://css3.com/"><i class="fa-brands fa-css3-alt"></i></i></a></li>
+                <li><a href="https://www.facebook.com/css3com"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://x.com/xcss3x"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

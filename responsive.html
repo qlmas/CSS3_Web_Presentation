@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ff325540d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <button id="menu-toggle" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="index.html" class="title-click"><h1><img src="/img/css3.svg" style=" height: 45px; vertical-align: middle;">CSS3 Web Prezentacija</h1></a>
+        <button id="mode-toggle" aria-label="Toggle dark/light mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="selectors.html">CSS Selektori</a></li>
+                <li><a href="layout.html">Layout Tehnike</a></li>
+                <li><a href="animations.html">Animacije i Tranzicije</a></li>
+                <li><a href="responsive.html">Responsive Design</a></li>
+                <li><a href="tools.html">CSS3 Alati</a></li>
+                <li><a href="references.html">Reference i Literatura</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <div class="info-card-selektori">
+            <h2>Responsive Design</h2>
+            <p>Responsive design omogućava da web stranica izgleda dobro na svim uređajima (desktop računarima, tabletima i mobilnim telefonima) koristeći CSS3 media queries i fleksibilne mreže (grids). Cilj je da stranica bude lako čitljiva i navigabilna bez obzira na uređaj.</p>
+            
+            <h3>Media Queries</h3>
+            <p>Media queries omogućavaju promenu stilova na osnovu karakteristika uređaja kao što su širina, visina, rezolucija i orijentacija ekrana.</p>
+            <pre><code>
+/* Primer za mobilne uređaje */
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Primer za tablete */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        background-color: lightgreen;
+    }
+    .container {
+        flex-direction: row;
+    }
+}
+
+/* Primer za desktop uređaje */
+@media (min-width: 1025px) {
+    body {
+        background-color: lightcoral;
+    }
+    .container {
+        flex-direction: row;
+    }
+}
+            </code></pre>
+        </div>
+        <div class="info-card-selektori">
+            <h3>Fleksibilne mreže (Flexbox i Grid)</h3>
+            <p>Flexbox i CSS Grid Layout omogućavaju kreiranje fleksibilnih i responzivnih rasporeda koji se lako prilagođavaju različitim veličinama ekrana.</p>
+            
+            <h4>Flexbox Primer</h4>
+            <pre><code>
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item {
+    flex: 1 1 200px; /* Rasteže se i zauzima minimalno 200px */
+    margin: 10px;
+}
+            </code></pre>
+
+            <h4>Grid Primer</h4>
+            <pre><code>
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+.grid-item {
+    background-color: #ccc;
+    padding: 20px;
+}
+            </code></pre>
+
+            <h3>Responsive Images</h3>
+            <p>Responsive images omogućavaju promenu veličine slika u zavisnosti od veličine ekrana.</p>
+            <pre><code>
+img {
+    max-width: 100%;
+    height: auto;
+}
+            </code></pre>
+        </div>
+        <div class="info-card-selektori">
+            <h3>Viewport Meta Tag</h3>
+            <p>Viewport meta tag omogućava kontrolu nad izgledom stranice na mobilnim uređajima. Postavlja se u <code>&lt;head&gt;</code> sekciji HTML dokumenta.</p>
+            <pre><code>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            </code></pre>
+        </section>
+    </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Almas Muratović & Edina Zubčević</p>
+            <ul class="social-links">
+                <li><a href="https://css3.com/"><i class="fa-brands fa-css3-alt"></i></i></a></li>
+                <li><a href="https://www.facebook.com/css3com"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://x.com/xcss3x"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
