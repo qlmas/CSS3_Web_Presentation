@@ -32,18 +32,20 @@
         <section class="content">
             <div class="info-card-selektori">
             <h2>Layout Tehnike</h2>
-            <p>CSS3 donosi mnoge nove tehnike za layout koje omogućavaju kreiranje kompleksnih i responzivnih web dizajna. Ove tehnike uključuju Flexbox, Grid, i druge metode za kontrolu rasporeda elemenata na stranici.</p>
+            <p>CSS3 donosi mnoge nove tehnike za layout koje omogućavaju kreiranje kompleksnih 
+                i responzivnih web dizajna. Ove tehnike uključuju Flexbox, Grid, 
+                i druge metode za kontrolu rasporeda elemenata na stranici.</p>
         </div>
         <div class="info-card-selektori">
             <h3>Flexbox</h3>
-            <p>Flexbox (Flexible Box) je layout model koji omogućava efikasno raspoređivanje prostora među stavkama unutar kontejnera, čak i kada su njihova veličina nepoznata i/ili dinamična.</p>
+            <p>Flexbox (Flexible Box) je layout model koji omogućava efikasno raspoređivanje prostora 
+                među opcijama unutar kontejnera, čak i kada je njihova veličina nepoznata i/ili dinamična.</p>
             <pre><code> 
 .container {
     display: flex;
     flex-direction: row; /* ili column */
     justify-content: center; /* Poravnanje po glavnoj osi */
     align-items: center; /* Poravnanje po poprečnoj osi */
-}
             </code></pre>
             <div class="container example-flex">
                 <div class="item">1</div>
@@ -53,7 +55,8 @@
         </div>
         <div class="info-card-selektori">
             <h3>Grid Layout</h3>
-            <p>CSS Grid Layout je dvodimenzionalni layout sistem koji omogućava kreiranje kompleksnih layouta sa redovima i kolonama.</p>
+            <p>CSS Grid Layout je dvodimenzionalni layout sistem koji omogućava 
+                kreiranje kompleksnih layouta sa redovima i kolonama.</p>
             <pre><code> 
 .container {
     display: grid;
@@ -76,7 +79,8 @@
         </div>
         <div class="info-card-selektori">
             <h3>Float i Clear</h3>
-            <p>Float svojstvo se koristi za raspoređivanje elemenata levo ili desno unutar kontejnera, dok clear svojstvo sprečava elemente da se pojave pored floated elemenata.</p>
+            <p>Float se koristi za raspoređivanje elemenata lijevo ili desno unutar kontejnera,
+                 dok Clear spriječava elemente da se pojave pored floated elemenata.</p>
             <pre><code> 
 img {
     float: left;
@@ -90,7 +94,7 @@ p.clearfix::after {
             </code></pre>
             <div class="float-container">
                 <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                <p>Ovo je primer teksta pored slike koja koristi float.</p>
+                <p>Ovo je primjer teksta pored slike koja koristi float.</p>
                 <p class="clearfix">Naredni element sa clearfix.</p>
             </div>
         
@@ -99,7 +103,7 @@ p.clearfix::after {
             <ul>
                 <li><strong>Static:</strong> Default pozicioniranje.</li>
                 <li><strong>Relative:</strong> Pozicioniranje relativno prema normalnoj poziciji.</li>
-                <li><strong>Absolute:</strong> Pozicioniranje relativno prema najbližem pozicioniranom pretku.</li>
+                <li><strong>Absolute:</strong> Pozicioniranje relativno prema najbližem pozicioniranom potomku.</li>
                 <li><strong>Fixed:</strong> Pozicioniranje relativno prema prozoru preglednika. <span id="show-fixed" style="text-decoration: underline; cursor: pointer;">Klikom ovdje aktivirate fixed element.</span></li> 
                 <li><strong>Sticky:</strong> Pozicioniranje bazirano na scroll poziciji.</li>
             </ul>

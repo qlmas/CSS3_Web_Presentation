@@ -76,6 +76,7 @@ body.dark-mode #menu-toggle i, body.dark-mode #mode-toggle i {
     background: #f8f9fa;
     overflow-y: auto;
     transition: left 0.3s;
+    z-index: 999;
 }
 
 body.dark-mode #navbar {
@@ -282,7 +283,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
-    margin: 15px;
+    margin: 0 10px;
     min-width: 250px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -520,7 +521,8 @@ body.dark-mode .info-card-selektori:hover {
     position: relative;
     height: 200px;
     border: 1px solid #ddd;
-    margin: 1em 0;
+    border-radius: 8px;
+    margin: 1em 35px;
     padding: 10px;
 }
 

@@ -7,12 +7,21 @@ document.addEventListener('DOMContentLoaded', function () {
         event.stopPropagation(); // Prevent the event from bubbling up to the document
     });
 
+    // Zatvaranje menija klikom na bilo koji deo stranice
     document.addEventListener('click', function (event) {
         if (navbar.classList.contains('open') && !navbar.contains(event.target)) {
             navbar.classList.remove('open');
         }
     });
+
+    // Zatvaranje menija skrolanjem stranice
+    window.addEventListener('scroll', function() {
+        if (navbar.classList.contains('open')) {
+            navbar.classList.remove('open');
+        }
+    });
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const modeToggle = document.getElementById('mode-toggle');
