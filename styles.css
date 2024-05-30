@@ -650,3 +650,42 @@ body.dark-mode .position-item{
 .transform-example .transform-box:hover {
     transform: rotate(0deg);
 }
+
+/* Media */
+
+@media screen and (max-width: 768px) {
+    .layout {
+        flex-direction: column; /* Postavite kolone umesto redova */
+        align-items: center; /* Centrirajte kartice */
+    }
+
+    .card {
+        width: 100%; /* Kartice preuzimaju celu širinu ekrana */
+        margin-bottom: 20px; /* Dodajte razmak između kartica */
+    }
+    
+    #navbar {
+        position: fixed;
+        left: -500px;
+        top: 0;
+        width: 400px;
+        height: 100%;
+        background: #f8f9fa;
+        overflow-y: auto;
+        transition: left 0.75s;
+        z-index: 999;
+    }
+    #navbar ul {
+        margin-top: 25px;
+    }
+    
+    .fixed {
+        position: fixed;
+        bottom: 0;
+        right: 10px; /* Opciono: možete zadržati desni odmak ako želite */
+        background-color: #f0f0f0;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none;
+    }
+}
