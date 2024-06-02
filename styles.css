@@ -688,4 +688,8 @@ body.dark-mode .position-item{
         border: 1px solid #ccc;
         display: none;
     }
+
+    .info-card {
+        margin-bottom: 25px;
+    }
 }
