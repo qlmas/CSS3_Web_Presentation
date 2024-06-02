@@ -38,17 +38,17 @@
             
             <h3>Tranzicije</h3>
             <p>Tranzicije omogućavaju elegantne promjene stilova elemenata tokom određenog vremena. 
-                Koriste se za kreiranje jednostavnih animacija kada se atributi CSS-a menjaju.</p>
+                Koriste se za kreiranje jednostavnih animacija kada se atributi CSS-a mijenjaju.</p>
             <pre><code>
 .box {
     width: 100px;
     height: 100px;
-    background-color: blue;
+    background-color: #35A8DB;
     transition: background-color 0.5s ease;
 }
 
 .box:hover {
-    background-color: red;
+    background-color: #1572B6;
 }
             </code></pre>
             <div class="hover-example">
@@ -63,20 +63,24 @@
                 koji mijenjaju stilove elemenata tokom vremena.</p>
             <pre><code>
 @keyframes example {
-    0% { background-color: blue; left: 0px; top: 0px; }
-    25% { background-color: green; left: 200px; top: 0px; }
-    50% { background-color: yellow; left: 200px; top: 200px; }
-    75% { background-color: red; left: 0px; top: 200px; }
-    100% { background-color: blue; left: 0px; top: 0px; }
-}
+    0% { background-color: #1572B6; left: 0px; }
+    12.5% { background-color: #1F80BC; left: 200px; }
+    25% { background-color: #298EC2; left: 400px; }
+    37.5% { background-color: #339CCA; left: 200px; }
+    50% { background-color: #3DAAD0; left: 0px; }
+    62.5% { background-color: #339CCA; left: -200px;}
+    75% { background-color: #298EC2; left: -400px;}
+    87.5% { background-color: #1F80BC; left: -200px;}
+    100% { background-color: #1572B6; left: 0px; }
+                }
 
-.animated-box {
+.animation-example .animated-box {
     position: relative;
     width: 100px;
     height: 100px;
     background-color: blue;
-    animation: example 4s infinite;
-}
+    animation: example 8s infinite;
+                }
             </code></pre>
             <div class="animation-example">
                 <h1>Primjer animacije</h1>
@@ -92,7 +96,7 @@
 .transform-box {
     width: 100px;
     height: 100px;
-    background-color: purple;
+    background-color: #35A8DB;
     transform: rotate(45deg);
     transition: transform 0.5s ease;
 }
