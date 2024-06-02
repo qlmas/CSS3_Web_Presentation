@@ -1,1 +1,1 @@
-KACHOOOOOOOWWWW ⚡
+⚡
